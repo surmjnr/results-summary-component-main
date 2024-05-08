@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<style>
+    body {font-family: 'Hanken Grotesk', sans-serif;font-weight: 500;width: 100%;}
+    
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    
+    .rounded-custom {border-radius: 30px;}
+    @media screen and (max-width: 576px) {
+      .rounded-custom {border-radius:0;}
+      .rounded-custom-sm{border-bottom-right-radius: 30px;border-bottom-left-radius: 30px;}
+    }
+
+    .custom-left-color{color: hsl(241, 100%, 89%);}
+    .custom-circle-color{background: linear-gradient(to bottom,  hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0))}
+    .custom-row{background: linear-gradient(to bottom, hsla(252, 100%, 67%, 1), hsla(241, 81%, 54%, 1));}
+    .custom-line-1,.custom-line-2,.custom-line-3,.custom-line-4{ font-weight: bold;}
+    .custom-line-1{background-color: hsla(0, 100%, 67%, 0.1);color: hsl(0, 100%, 67%);}
+    .custom-line-2{background-color: hsla(39, 100%, 56%,0.1);color: hsl(39, 100%, 56%);}
+    .custom-line-3{background-color: hsl(221, 100%, 96%);color: hsl(166, 100%, 37%);}
+    .custom-line-4{background-color: hsl(241, 100%, 89%);color:  hsl(234, 85%, 45%);}
+    .custom-percent{color: hsl(223, 11%, 62%);}
+    .custom-color{color: hsl(224, 30%, 27%);}
+    .btn-custom-secondary{border: none; background-color:hsl(224, 30%, 27%) ;}
+    .btn-custom-secondary:hover{background-color: hsl(241, 81%, 54%);}
+    .custom-mark-style{margin-bottom:-16px;padding: 12px 0;}
+  </style>
+</head>
+<body>
+  <div class="container mt-sm-5 shadow col-12 col-sm-6 rounded-custom">
+    <div class="row justify-content-center ">
+      <div class="col-sm-6  text-center py-5 custom-row rounded-custom rounded-custom-sm ">
+        <p class="custom-left-color" style="font-size: 20px;" >Your Result</p>
+        <div class="rounded-circle p-4 custom-circle-color my-4 shadow" style="display: inline-block;width:12em; height: 12em;" >
+          <h1 class="fw-bold text-white" style="font-size: 6em;">76</h1>
+          <h6 class="custom-left-color">of 100</h6>
+        </div>
+      
+        <h4 class="text-white mt-3" style="font-size: 30px;">Great</h4>
+        <p class="custom-left-color">You scored higher than 65% of the people who have taken these tests.
+        </p>      
+       
+      </div>
+      <div class="col-sm-6 d-grid gap-3 py-5 " style="border-radius: 30px;">
+        <p class="fw-bold">Summary</p>
+
+        <div>
+          <div class="d-flex justify-content-between px-3  align-items-center rounded-3 mb-3 custom-line-1">
+            <div class="d-flex">
+              <div><img src="/assets/images/icon-reaction.svg" alt="Reaction"></div>
+              <div class=" ms-2"><span>Reaction</span></div>  
+            </div>
+            <div class="align-self-center custom-mark-style"><p class="custom-color">80 <span class="custom-percent"> / 100</span></p></div>
+          </div>
+          <div class="d-flex justify-content-between px-3 align-items-center rounded-3 mb-3 custom-line-2 ">
+            <div class="d-flex">
+              <div><img src="/assets/images/icon-memory.svg" alt="Reaction"></div>
+              <div class=" ms-2"><span>Memory</span></div>  
+            </div>
+            <div class="align-self-center custom-mark-style"><p class="custom-color">92<span class="custom-percent">/ 100</span></p></div>
+          </div>
+          <div class="d-flex justify-content-between px-3 align-items-center  rounded-3 mb-3 custom-line-3">
+            <div class="d-flex">
+              <div><img src="/assets/images/icon-verbal.svg" alt="Reaction"></div>
+              <div class=" ms-2"><span>Verbal</span></div>  
+            </div>
+            <div class="align-self-center custom-mark-style"><p class="custom-color">61<span class="custom-percent">/ 100</span></p></div>
+          </div>
+          <div class="d-flex justify-content-between px-3 align-items-center  rounded-3 mb-3 custom-line-4 ">
+            <div class="d-flex">
+              <div><img src="/assets/images/icon-visual.svg" alt="Reaction"></div>
+              <div class=" ms-2"><span>Visual</span></div>  
+            </div>
+            <div class="align-self-center custom-mark-style "><p class="custom-color">72<span class="custom-percent">/ 100</span></p></div>
+          </div>
+        </div>            
+    
+        <button class="btn btn-secondary rounded-pill  btn-custom-secondary py-3">Continue</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+  <div class="attribution fixed-bottom">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Abberteh Kofi Banafo</a>.
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
